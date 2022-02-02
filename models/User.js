@@ -2,6 +2,10 @@ const bcrypt = require('bcrypt');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+Post.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+
 // create our User model
 class User extends Model {
    // set up method to run on instance data (per user) to check password
