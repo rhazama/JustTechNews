@@ -1,11 +1,18 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
 
+// get comment
 router.get('/', (req, res) => {
-
+  Comment.findAll()
+  .then(dbCommentData => res.json(dbCommentData))
+  .catch(err => {
+    console.log (err);
+  });
 });
 
+// post comment
 router.post('/', (req, res) => {
+  // expect => {comment_text: "comment goes here", user_id:1, post_id:2}
     Comment.create({
         comment_text: req.body.comment_text,
         user_id: req.body.user_id,
@@ -18,8 +25,24 @@ router.post('/', (req, res) => {
         });
 });
 
+// delete comment
 router.delete('/:id', (req, res) => {
-
+  Comment.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(dbCommentData => {
+    if (!dbCommentData) {
+      res.status(404).json({ message: 'No comment found with this id'});
+    return;
+  };
+    res.json(dbCommentData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 module.exports = router;
