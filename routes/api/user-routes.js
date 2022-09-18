@@ -1,5 +1,5 @@
 const router = require('express').Router();
-import { User, Post, Comment, Vote } from '../../models';
+const { User, Post, Comment, Vote } = require ('../../models');
 
 // get all users
 router.get('/', (req, res) => {
@@ -132,4 +132,4 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-export default router;
+module.exports = router;
