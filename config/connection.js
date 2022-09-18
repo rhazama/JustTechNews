@@ -14,4 +14,4 @@ sequelize = new Sequelize(process.env.JAWSDB_URL);
 });
 }
 
-module.exports = Sequelize;
+module.exports = sequelize;
