@@ -1,4 +1,4 @@
-<h1 align="center">Just Tech News</h1>
+<h1 align="center">:computer: Just Tech News :computer:</h1>
 
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 ## Description
