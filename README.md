@@ -3,6 +3,8 @@
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 ## Description
 Current tech related news website.
+<br />
+<br />
 You can access the application through the following link: [Currently Under Maintenance]
 
 
