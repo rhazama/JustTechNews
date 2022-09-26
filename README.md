@@ -2,7 +2,7 @@
 
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 ## Description
-A web application to find current tech related news. 
+A web application to find current tech related news. **Currently under maintenance
 <br />
 <br />
 You can access the application through the following link: [Currently Under Maintenance]
