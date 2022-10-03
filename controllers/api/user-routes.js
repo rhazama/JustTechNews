@@ -142,4 +142,8 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+router.post('/logout', (req, res) => {
+
+});
+
 module.exports = router;
