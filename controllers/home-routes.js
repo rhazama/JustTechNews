@@ -89,6 +89,7 @@ router.get('/post/:id', (req, res) => {
         post,
         loggedIn: req.session.loggedIn
       });
+ 
 });
 
 module.exports = router;
