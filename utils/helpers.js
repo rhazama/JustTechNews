@@ -8,5 +8,10 @@ module.exports = {
       }
   
       return word;
-    }
+    },
+
+    format_url: url => {
+        return url
+          .replace('http://', '')
+      },
   }
