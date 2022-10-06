@@ -5,11 +5,12 @@ const withAuth = require('../utils/auth');
 
 // get all posts for dashboard
 router.get('/', withAuth, (req, res) => {
-    Post.findAll({
-      where: {
-        // use the ID from the session
-        user_id: req.session.user_id
-      },
+  console.log(req.session);
+  console.log('======================');
+  Post.findAll({
+    where: {
+      user_id: req.session.user_id
+    },
       attributes: [
         'id',
         'post_url',
